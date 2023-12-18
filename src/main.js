@@ -1,3 +1,6 @@
 import '@styles/main.scss'
+import { gsap, ScrollTrigger, Draggable, Flip, MotionPathPlugin } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger, Draggable, Flip, MotionPathPlugin); 
 
-// import nexen from '@scripts/nexen.js'
+import cursor from '@scripts/cursor.js';
+cursor();

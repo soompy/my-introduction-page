@@ -20,6 +20,21 @@
     }
 }
 
+@keyframes scrollEffect {
+    0% {
+        opacity: 0.1;
+        transform: translate(-50%, -20%);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    100% {
+        opacity: 0.1;
+        transform: translate(-50%, -20%);
+    }
+}
+
 .wrapper {
     overflow-x: hidden;
     position: relative;
@@ -375,6 +390,7 @@
     }
 
     &.a_05 {
+        min-height: 100vh;    
         h3 {
             display: inline-block;
             font-size: 22px;
@@ -382,7 +398,7 @@
             background: var(--clr-reversal);
             color: var(--clr-basic);
             padding: 8px;
-            margin-bottom: 22px;
+            margin-bottom: 82px;
         }
         .horizontal-container {            
             display: flex;
@@ -394,7 +410,10 @@
             .cards-wrap {              
                 display: flex;
                 align-items: center;
-                justify-content: center;              
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 1400px;
+                margin: auto;
 
                 .card-section {
                     flex-shrink: 0;
@@ -470,108 +489,7 @@
                 }
             }
         }        
-    }
-
-    &.a_06 {
-        position: relative;
-        width: 100vw;        
-        height: 300vh;
-
-        .target-06 {
-            position: relative;
-            max-width: 100vw;
-            height: 100vh;
-            text-align: center;
-
-            .elem6 {
-                position: relative;
-                top: 0;
-                left: 0;
-                opacity: 0;
-                z-index: 2;
-                width: 100vw;
-                transition: 0.3s ease opacity;
-
-                p {
-                    position: relative;
-                    z-index: 5;
-                    height: 100vh;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    font-size: 80px;                    
-                    line-height: 48px;
-                    font-family: 'Giants-Inline';
-                    font-weight: bold;
-                }
-            }
-
-            &.first {
-                z-index: 5;
-                color: var(--clr-basic);
-
-                .v-bg {
-                    position: absolute;
-                    z-index: 1;
-                    top: 0;
-                    left: 12%;
-                    right: 12%;
-                    height: 100vh;
-                    background: url("../assets/images/img_08.jpg") no-repeat center center;
-                    background-attachment: fixed;
-                    background-size: cover;
-                    transform: scale(1.15);
-                    transition: 0.5s ease all;
-                }
-            }
-        }
-
-        &.fixed {
-            .target-06 {
-                overflow: hidden;
-                position: fixed;
-                left: 0;
-                top: 0;                
-
-                .elem6 {
-                    opacity: 1;
-                    transition-delay: 0.5s;
-                    text-shadow: 0 0.1em 20px var(--clr-gray-0), 0.05em -0.03em 0 var(--clr-gray-0),
-            0.05em 0.005em 0 var(--clr-gray-0), 0em 0.08em 0 var(--clr-gray-0),
-            0.05em 0.08em 0 var(--clr-gray-0), 0px -0.03em 0 var(--clr-gray-0),
-            -0.03em -0.03em 0 var(--clr-gray-0), -0.03em 0.08em 0 var(--clr-gray-0), -0.03em 0 0 var(--clr-gray-0);
-                }
-
-                &.first {
-                    z-index: 2;                 
-                    .elem6 {
-                        text-shadow: 0 0.1em 20px var(--clr-reversal), 0.05em -0.03em 0 var(--clr-reversal),
-            0.05em 0.005em 0 var(--clr-reversal), 0em 0.08em 0 var(--clr-reversal),
-            0.05em 0.08em 0 var(--clr-reversal), 0px -0.03em 0 var(--clr-reversal),
-            -0.03em -0.03em 0 var(--clr-reversal), -0.03em 0.08em 0 var(--clr-reversal), -0.03em 0 0 var(--clr-reversal);
-                    }
-                    .v-bg {
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        animation: scale 2s forwards;
-                        animation-delay: 0.5s;
-                    }
-                }
-
-                @keyframes scale {
-                    0% {
-                        transform: scale(1.15);
-                    }
-
-                    100% {
-                        transform: scale(1);
-                    }
-                }
-            }
-        }
-    }
+    }    
 
     &.a_07 {
         .target-07 {
@@ -637,19 +555,14 @@
         position: relative;
         height: 100vh;
 
-        .target-08 {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;         
-            
+        .target-08 {            
             .contact-box {       
                 position: absolute;
-                top: 50%;                
+                top: 50%;     
+                left: 50%;           
                 width: 100%;
                 text-align: center;
-                transform: translateY(-50%);
+                transform: translate(-50%, -50%);
                 h3 {
                     font-size: 80px;
                     font-weight: bold;

@@ -116,44 +116,8 @@ const interactive = () => {
       "start"
     );
 
-  const a06 = document.querySelector(".area.a_06");
-  const header = document.querySelector("header");
   const sideBoxL = document.querySelector(".side-box.left-side");
   const sideBoxR = document.querySelector(".side-box.right-side");
-
-  gsap.to(".target-06.first", {
-    height: 0,
-    scrollTrigger: {
-      trigger: ".a_06",
-      start: "top center",
-      end: "bottom center",
-      scrub: 2,
-      onUpdate: ({ progress }) => {
-        gsap.to(a06, { opacity: 1 - progress });
-      },
-      onToggle: function (self) {
-        const isZeroHeight = self.isActive;
-
-        if (!isZeroHeight) {
-          a06.classList.add("fixed");
-        } else {
-          a06.classList.remove("fixed");
-        }
-      },
-    },
-  });
-
-  window.addEventListener("scroll", function () {
-    const sectionRect06 = a06.getBoundingClientRect();
-
-    if (sectionRect06.top < window.innerHeight && sectionRect06.bottom >= 0) {
-      a06.classList.add("fixed");
-      header.classList.add("v2");
-    } else {
-      a06.classList.remove("fixed");
-      header.classList.remove("v2");
-    }
-  });
 
   const sideL = {
     trigger: ".target-07",

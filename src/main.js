@@ -1,6 +1,6 @@
 import '@styles/main.scss'
 import { gsap, ScrollTrigger, Draggable, Flip, MotionPathPlugin } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger, Draggable, Flip, MotionPathPlugin); 
+gsap.registerPlugin(ScrollTrigger, Draggable, Flip, MotionPathPlugin);
 
 import header from '@scripts/header.js';
 import cursor from '@scripts/cursor.js';

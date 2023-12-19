@@ -307,7 +307,7 @@
                 align-items: center;
                 span {
                     display: block;
-                    margin-right: 16px ;
+                    margin-right: 16px;
                 }
                 strong {
                     display: inline-block;
@@ -316,12 +316,22 @@
                     padding: 0 16px;
                 }
             }
-        }        
-    }
-
-    .matterContainer {
-        width: 460px;
-        height: 460px;
+        }      
+        
+        .rotate-canvas-wrapper {
+            position: relative;
+            canvas {
+                display: block;
+            }
+            aside {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 200px;
+                padding: 20px;
+                background-color: #fff;
+            }
+        }          
     }
 
     &.a_04 {
@@ -624,4 +634,256 @@
     height: 140px;
     flex-shrink: 0;
     border-radius: 50%;    
+}
+
+@media screen and (max-width: 1400px) {
+    .area {
+        &.a_01 {
+            .target-01 {
+                padding: 0 40px;               
+            }
+        }
+
+        &.a_02 {
+            padding: 0 40px;
+            .left-area {
+                width: 65%;
+            }
+            .right-area {
+                width: 30%;
+            }
+        }
+
+        &.a_05 {
+            padding: 82px 0;
+            .horizontal-container {
+                .cards-wrap {
+                    width: 100%;
+                    justify-content: flex-start;
+                    padding: 0 40px;
+                    .card-section {
+                        margin: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .area {
+        &.a_00 {   
+            .target-00 {
+                flex-direction: column-reverse;
+                .title {                            
+                    font-size: vw(80);
+                    line-height: vw(100);                    
+                    text-shadow: vw(4) vw(4) vw(13) rgba(145,149,113,0.6);
+                    padding-left: 0;
+                    background-size: 16% auto;
+                    span {
+                        text-align: center;
+                    }
+                }
+    
+                .introduce-box {      
+                    .profile-img {
+                        height: vw(400);
+                    }
+                }                                
+            }             
+    
+            .rolling-container {
+                padding: vw(20) 0;
+                .rolling-box {
+                    font-size: vw(32);
+                    letter-spacing: vw(0.5);                    
+                }                                                                
+            }
+        }
+
+        &.a_01 {
+            .target-01 {
+                flex-direction: column;
+                padding: 0 40px;
+                .introduce-box {                
+                    h2 {
+                        font-size: vw(40);
+                        line-height: vw(50);                                          
+                        margin-bottom: vw(40);                   
+                    }
+                    p {
+                        font-size: vw(20);
+                        line-height: vw(34);                      
+                    }
+                    .strength-box {
+                        margin-top: vw(30);
+                    }
+                }
+                
+                .elem1 {  
+                    width: vw(320);
+                    max-width: vw(320);
+                    margin-left: vw(50);  
+                    margin-top: vw(50);                  
+                }
+            }
+        }
+
+        #lightCanvas {
+            top: vw(260);
+            right: vw(214);
+            width: vw(140);
+            height: vw(140);        
+        }
+
+        &.a_02 {
+            padding: 0 vw(40);
+            .vertical-scroll {
+                flex-direction: column;
+            } 
+            .left-area {
+                width: 100%;
+            }
+            .right-area {
+                width: 50%;
+                margin-top: vw(40);
+            }                       
+        }
+
+        &.a_03 {
+            h3 {
+                font-size: vw(22);
+                padding: vw(8);
+                margin-bottom: vw(22);
+            }
+    
+            .skill-box {
+                font-size: vw(22);
+                line-height: vw(32);
+                p {
+                    span {
+                        margin-right: vw(16);
+                    }
+                    strong {
+                        margin-right: vw(8);
+                        border-radius: vw(8);
+                        padding: 0 vw(16);
+                    }
+                }
+            }      
+            
+            .rotate-canvas-wrapper {
+                position: relative;
+                canvas {
+                    display: block;
+                }
+                aside {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 200px;
+                    padding: 20px;
+                    background-color: #fff;
+                }
+            }          
+        }
+
+        &.a_04 {    
+            .first-container {                
+                h1 {
+                    font-size: vw(60);                    
+                    text-shadow: vw(1) vw(-1) vw(5) var(--clr-gray-0);             
+                }
+            }
+    
+            .transition {                
+                .second-container {
+                    font-size: vw(16);
+                    line-height: vw(28);
+                    text-shadow: vw(1) vw(-1) vw(5) var(--clr-basic);                      
+                }
+            }
+        }
+
+        &.a_05 {   
+            padding: vw(62) 0;         
+            h3 {                
+                font-size: vw(22);
+                padding: vw(8);
+                margin-bottom: vw(62);
+            }
+            .horizontal-container {                            
+                .cards-wrap {              
+                    width: 100%;
+                    justify-content: center;
+                    padding: 0 vw(40);
+    
+                    .card-section {
+                        width: vw(400);
+                        height: vw(400);                        
+                        margin-right: vw(16);                        
+    
+                        .card-inner {                            
+                            font-size: vw(24);
+                            padding: vw(40);                            
+    
+                            h4 {
+                                margin-bottom: vw(20);
+                            }
+                            > div {
+                                p {                                    
+                                    font-size: vw(20);
+                                    line-height: vw(24);
+    
+                                    a { 
+                                        padding-left: vw(8);                                        
+                                    }
+                                }                               
+                            }
+                            &:after {
+                                top: vw(-16);
+                                width: vw(64);
+                                height: vw(64);                                
+                            }
+                        }      
+                    }
+                }
+            }        
+        }
+
+        &.a_07 {
+            .target-07 {                
+                .side-box {
+                    width: vw(400);
+                    
+                }
+    
+                p {
+                    font-size: vw(60);
+                    text-shadow: vw(2) vw(2) vw(2) #000; 
+                }
+            }
+        }
+
+        &.a_08 {    
+            .target-08 {            
+                .contact-box {                           
+                    h3 {
+                        font-size: vw(60);                        
+                    }  
+                    .contact-text {
+                        margin-top: vw(30);
+                        p {
+                            font-size: vw(32);
+                            line-height: vw(48);
+                            a {
+                                padding-left: vw(8);
+                            }
+                        }
+                    }
+                }           
+            }    
+        }
+    }
 }

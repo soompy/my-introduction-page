@@ -3,8 +3,7 @@
 
 * {
     box-sizing: border-box;
-    cursor: none;
-    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+    cursor: none;    
     letter-spacing: -0.16px;
 
     &::selection {
@@ -14,6 +13,7 @@
 
 body {
     background: var(--clr-primary) !important;
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
     cursor: none !important;
 
     --clr-blue: #a1d1e2;

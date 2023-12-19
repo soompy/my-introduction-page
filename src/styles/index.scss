@@ -285,7 +285,12 @@
     }
 
     &.a_03 {
-        flex-direction: column;
+        height: 50vh;
+        align-items: center;
+        justify-content: center;    
+        .target-03 {
+            width: auto;
+        }
         h3 {
             display: inline-block;
             font-size: 22px;
@@ -293,10 +298,7 @@
             background: var(--clr-reversal);
             color: var(--clr-basic);
             padding: 8px;
-            margin-bottom: 22px;
-            &.hide {
-                display: none;
-            }
+            margin-bottom: 22px;            
         }
 
         .skill-box {
@@ -305,33 +307,26 @@
             p {
                 display: flex;
                 align-items: center;
+                margin-bottom: 12px;
                 span {
                     display: block;
                     margin-right: 16px;
                 }
                 strong {
-                    display: inline-block;
+                    display: inline-flex;
                     margin-right: 8px;
                     border-radius: 8px;
-                    padding: 0 16px;
+                    padding: 8px 16px;
+                }
+                .score {                    
+                    font-weight: bold;
+                    text-align: center;
+                    background: var(--clr-green);
+                    padding: 0 2px; 
+                    margin-left: 8px;                   
                 }
             }
-        }      
-        
-        .rotate-canvas-wrapper {
-            position: relative;
-            canvas {
-                display: block;
-            }
-            aside {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 200px;
-                padding: 20px;
-                background-color: #fff;
-            }
-        }          
+        }                                
     }
 
     &.a_04 {
@@ -771,22 +766,7 @@
                         padding: 0 vw(16);
                     }
                 }
-            }      
-            
-            .rotate-canvas-wrapper {
-                position: relative;
-                canvas {
-                    display: block;
-                }
-                aside {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    width: 200px;
-                    padding: 20px;
-                    background-color: #fff;
-                }
-            }          
+            }                                   
         }
 
         &.a_04 {    

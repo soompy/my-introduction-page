@@ -170,7 +170,7 @@
                 .underline {
                     display: inline-block;
                     font-weight: bold;
-                    transition: all 0.5s linear;                    
+                    transition: all 0.2s ease-in;                    
                 }
             }
             
@@ -318,7 +318,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url("../images/img_06.jpg");
+        background-image: url("../assets/images/img_06.jpg");
 
         .first-container {
             position: absolute;
@@ -667,6 +667,8 @@
                         line-height: 48px;
                         a {
                             display: block;
+                            color: #0366d6;
+                            padding-left: 8px;
                         }
                     }
                 }

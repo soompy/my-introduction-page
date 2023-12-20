@@ -19,20 +19,20 @@ const cursor = () => {
   });
   document.addEventListener("mouseup", () => {
     cursorElement.classList.remove("cursor--active");
-  });
+  }); 
 
   const aElements = document.querySelectorAll("a");
+  const cursorTraceInner = document.querySelector(".cursor__trace__inner");
+
   aElements.forEach((aElement) => {
     aElement.addEventListener("mouseover", () => {
-      const cursorTraceInner = document.querySelector(".cursor__trace__inner");
       cursorTraceInner.style.transform = "translate(-50%, -50%) scale(1.4)";
-      cursorTraceInner.style.opacity = 0.35;
+      cursorTraceInner.style.backgroundColor = '#0ae448';
     });
 
     aElement.addEventListener("mouseout", () => {
-      const cursorTraceInner = document.querySelector(".cursor__trace__inner");
       cursorTraceInner.style.transform = "translate(-50%, -50%) scale(1)";
-      cursorTraceInner.style.opacity = 0.25;
+      cursorTraceInner.style.backgroundColor = '#4b8d47';
     });
   });
 };

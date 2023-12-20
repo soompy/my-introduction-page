@@ -29,9 +29,9 @@
         transform: translate(-50%, -50%);
         transition: all 0.1s ease;
     }
-}
 
-.cursor--active .cursor__trace__inner {
-    transform: scale(0.5) translate(-100%, -100%);
-    transition: transform 0.3 ease;
+    .cursor--active .cursor__trace__inner {
+        transform: scale(0.5) translate(-100%, -100%);
+        transition: transform 0.3 ease;
+    }    
 }

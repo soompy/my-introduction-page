@@ -295,8 +295,9 @@
         height: 50vh;
         align-items: center;
         justify-content: center;    
+        padding: 80px 40px;
         .target-03 {
-            width: auto;
+            width: auto;            
         }
         h3 {
             display: inline-block;
@@ -309,28 +310,19 @@
         }
 
         .skill-box {
-            font-size: 22px;
-            line-height: 32px;
-            p {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 22px;                    
+            > div {
                 display: flex;
                 align-items: center;
-                margin-bottom: 12px;
-                span {
-                    display: block;
-                    margin-right: 16px;
-                }
-                strong {
-                    display: inline-flex;
-                    margin-right: 8px;
-                    border-radius: 8px;
-                    padding: 8px 16px;
-                }
-                .score {                    
-                    font-weight: bold;
-                    text-align: center;
-                    background: var(--clr-green);
-                    padding: 0 2px; 
-                    margin-left: 8px;                   
+                justify-content: center;
+                flex-direction: column;
+                margin: 10px;
+                .skill {
+                    display: block;                    
+                    padding-top: 4px;
                 }
             }
         }                                
@@ -756,6 +748,8 @@
         }
 
         &.a_03 {
+            height: auto;
+            padding: vw(80) vw(40);            
             h3 {
                 font-size: vw(22);
                 padding: vw(8);
@@ -764,15 +758,10 @@
     
             .skill-box {
                 font-size: vw(22);
-                line-height: vw(32);
-                p {
-                    span {
-                        margin-right: vw(16);
-                    }
-                    strong {
-                        margin-right: vw(8);
-                        border-radius: vw(8);
-                        padding: 0 vw(16);
+                > div {
+                    margin: vw(10);
+                    .skill {
+                        padding-top: vw(4);
                     }
                 }
             }                                   

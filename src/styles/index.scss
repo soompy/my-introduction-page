@@ -163,8 +163,7 @@
 
     &.a_01 {
         .target-01 {
-            display: flex;
-            align-items: center;
+            display: flex;            
             justify-content: center;
             word-break: keep-all;
             .introduce-box {                
@@ -197,8 +196,7 @@
                 flex-shrink: 0;
                 width: 320px;     
                 max-width: 320px;                                                         
-                margin-left: 50px;
-                transform: scaleX(-1);                
+                margin-left: 50px;                   
             }
 
             .btn-career {
@@ -627,10 +625,10 @@
 #lightCanvas {
     overflow: hidden;
     position: absolute;
-    top: 260px;
-    right: 214px;
-    width: 140px;
-    height: 140px;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
     flex-shrink: 0;
     border-radius: 50%;    
 }
@@ -704,16 +702,16 @@
         &.a_01 {
             .target-01 {
                 flex-direction: column;
-                padding: 0 40px;
+                padding: 0 vw(40);
                 .introduce-box {                
                     h2 {
-                        font-size: vw(40);
-                        line-height: vw(50);                                          
-                        margin-bottom: vw(40);                   
+                        font-size: vw(46);
+                        line-height: vw(64);                                          
+                        margin-bottom: vw(80);                   
                     }
                     p {
-                        font-size: vw(20);
-                        line-height: vw(34);                      
+                        font-size: vw(32);
+                        line-height: vw(56);                      
                     }
                     .strength-box {
                         margin-top: vw(30);
@@ -729,11 +727,10 @@
             }
         }
 
-        #lightCanvas {
-            top: vw(260);
-            right: vw(214);
-            width: vw(140);
-            height: vw(140);        
+        #lightCanvas {  
+            position: inherit;          
+            width: vw(300);
+            height: vw(300);        
         }
 
         &.a_02 {
@@ -743,6 +740,21 @@
             } 
             .left-area {
                 width: 100%;
+                .career-text {    
+                    .company {
+                        font-size: vw(38);
+                        line-height: vw(80);
+                    }
+                    .desc {
+                        font-size: vw(30);
+                        line-height: vw(40);
+                        margin-top: vw(22);                                           
+                    }
+    
+                    &.active {
+                        display: block;
+                    }
+                }
             }
             .right-area {
                 width: 50%;

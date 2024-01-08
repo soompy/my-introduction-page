@@ -396,6 +396,7 @@
 
     &.a_05 {
         min-height: 100vh;    
+        padding: 80px 0;
         h3 {
             display: inline-block;
             font-size: 22px;
@@ -425,7 +426,7 @@
                     width: 400px;
                     height: 400px;                  
                     position: relative;
-                    margin-right: 16px;                                                                     
+                    margin: 16px;                                                                     
                     background: var(--clr-ivory);
 
                     .card-inner {                            
@@ -652,11 +653,9 @@
         }
 
         &.a_05 {
-            padding: 82px 0;
             .horizontal-container {
                 .cards-wrap {
-                    width: 100%;
-                    justify-content: flex-start;
+                    width: 100%;                    
                     padding: 0 40px;
                     .card-section {
                         margin: 8px;
@@ -808,14 +807,13 @@
             }
             .horizontal-container {                            
                 .cards-wrap {              
-                    width: 100%;
-                    justify-content: center;
+                    width: 100%;                    
                     padding: 0 vw(40);
     
                     .card-section {
                         width: vw(400);
                         height: vw(400);                        
-                        margin-right: vw(16);                        
+                        margin: vw(16);                        
     
                         .card-inner {                            
                             font-size: vw(24);

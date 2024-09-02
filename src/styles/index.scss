@@ -60,44 +60,33 @@
     }
 
     &.a_00 {
-        position: relative;
-        display: flex;
+        position: relative;        
         flex-direction: column;        
         height: 100vh;                  
 
         .target-00 {
-            overflow: hidden;
-            display: flex;
-            align-items: center;      
-            justify-content: space-between;      
-            position: absolute;
-            width: auto;
-            bottom: 12%;        
-
-            .title {                            
-                font-size: 120px;
-                line-height: 140px;
+            overflow: hidden;      
+            width: fit-content; 
+            margin: inherit;
+            .title {                          
+                font-size: 120px;     
+                line-height: 1.4;                      
                 font-weight: 900;
+                border-top: 4px solid var(--clr-reversal);
+                border-bottom: 4px solid var(--clr-reversal);
                 color: var(--clr-reversal);
-                text-shadow: 4px 4px 13px rgba(145,149,113,0.6);
-                background: url('../assets/images/star.png') right top no-repeat;
-                background-size: 26% auto;
-                padding-left: 120px;
+                text-shadow: 4px 4px 13px rgba(145,149,113,0.6);            
                 span {
                     display: block;
                 }
             }
 
-            .introduce-box {      
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;                            
-        
-                .profile-img {
-                    width: auto;
-                    height: 600px;
-                }
-            }    
+            h3 {
+                font-size: 30px;
+                font-weight: 600;
+                padding: 20px 0;
+                border-bottom: 4px solid var(--clr-reversal);
+            }
             
             @keyframes growth {
                 0% {
@@ -117,16 +106,12 @@
             }
         }             
 
-        .rolling-container {
-            position: absolute;
-            left: 50%;
-            bottom: 12%;
+        .rolling-container {      
             display: flex;
             align-items: center;
             width: 100% !important;
             width: auto;
-            z-index: 1;
-            background: var(--clr-reversal);
+            z-index: 1;            
             padding: 20px 0;
             transform: translate(-50%, 0);                        
             transform-origin: center center;
@@ -139,7 +124,7 @@
                 font-weight: bold;
                 letter-spacing: 0.5px;
                 white-space: nowrap;    
-                color: var(--clr-basic);
+                color: var(--clr-reversal);
                 transform: translateY(-50%);                
                 animation: flowHorizontal 14s linear infinite;
                 animation-fill-mode: backwards;
@@ -310,20 +295,23 @@
             margin-bottom: 22px;            
         }
 
-        .skill-box {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
+        .skill-box {          
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 40px;
             font-size: 22px;                    
             > div {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                width: 110px;
                 margin: 10px;
                 .skill {
-                    display: block;                    
-                    padding-top: 4px;
+                    display: block;   
+                    font-weight: bold;                 
+                    padding-top: 14px;
                 }
             }
         }                                
@@ -335,10 +323,6 @@
         left: 0;
         height: 150vh;
         background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url("../assets/images/img_06.jpg");
 
         .first-container {
             position: absolute;
@@ -361,9 +345,9 @@
 
         .transition {
             position: absolute;
-            left: 0;
+            left: 50%;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translate(-50%, -50%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -669,24 +653,24 @@
 @media screen and (max-width: 720px) {
     .area {
         &.a_00 {   
-            .target-00 {
-                flex-direction: column-reverse;
+            .target-00 {                
+                padding: 0 vw(40);
                 .title {                            
-                    font-size: vw(80);
-                    line-height: vw(100);                    
+                    font-size: vw(120);                    
+                    border-top: vw(4) solid var(--clr-reversal);               
+                    border-bottom: vw(4) solid var(--clr-reversal);               
                     text-shadow: vw(4) vw(4) vw(13) rgba(145,149,113,0.6);
                     padding-left: 0;
-                    background-size: 16% auto;
+                    background-size: 16% auto;                    
                     span {
                         text-align: center;
                     }
-                }
-    
-                .introduce-box {      
-                    .profile-img {
-                        height: vw(400);
-                    }
-                }                                
+                }         
+                h3 {
+                    font-size: vw(30);                    
+                    padding: vw(20) 0;
+                    border-bottom: vw(4) solid var(--clr-reversal);
+                }                           
             }             
     
             .rolling-container {
@@ -771,11 +755,13 @@
             }
     
             .skill-box {
+                gap: vw(40);
                 font-size: vw(22);
                 > div {
+                    width: vw(110);
                     margin: vw(10);
                     .skill {
-                        padding-top: vw(4);
+                        padding-top: vw(14);
                     }
                 }
             }                                   

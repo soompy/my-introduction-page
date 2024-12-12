@@ -23,103 +23,33 @@ const interactive = () => {
         },
     });
 
-    const careerText = document.querySelectorAll(".career-text");
-    const cardBox = document.querySelectorAll(".card-box");
 
-    gsap.set(".title_00", { opacity: 0, scale: 0 });
-    gsap.set(".title_01", { opacity: 0, scale: 0 });
-    gsap.set(".title_02", { opacity: 0, scale: 0 });
-    gsap.set(".title_03", { opacity: 0, scale: 0 });
-    gsap.set(".title_04", { opacity: 0, scale: 0 });
-    gsap.set(".title_05", { opacity: 0, scale: 0 });
+    const careerTexts = document.querySelectorAll(".career-text");
 
-    let tl0 = gsap
-        .timeline({
-            scrollTrigger: {
-                trigger: ".a_02",
-                start: "center center",
-                end: "bottom center",
-                toggleActions: "play none reverse none",
-                pin: true,
-                pinSpacing: false,
-                scrub: 12,
-                duration: 3.5,
-                ease: "circ.out",
-                delay: 2,
+    careerTexts.forEach((element, index) => {
+        gsap.fromTo(
+            element,
+            {
+                opacity: 0,
+                y: 50,
             },
-        })
-        .to(
-            ".title_00",
             {
                 opacity: 1,
-                scale: 1,
-                delay: 0.5,
-                ease: "power3.out",
-                repeat: -1,
-                yoyo: true,
-            },
-            "start"
-        )
-        .to(
-            ".title_01",
-            {
-                opacity: 1,
-                scale: 1,
-                delay: 0.5,
-                ease: "power3.out",
-                repeat: -1,
-                yoyo: true,
-            },
-            "start"
-        )
-        .to(
-            ".title_02",
-            {
-                opacity: 1,
-                scale: 1,
-                delay: 0.5,
-                ease: "power3.out",
-                repeat: -1,
-                yoyo: true,
-            },
-            "start"
-        )
-        .to(
-            ".title_03",
-            {
-                opacity: 1,
-                scale: 1,
-                delay: 0.5,
-                ease: "power3.out",
-                repeat: -1,
-                yoyo: true,
-            },
-            "start"
-        )
-        .to(
-            ".title_04",
-            {
-                opacity: 1,
-                scale: 1,
-                delay: 0.5,
-                ease: "power3.out",
-                repeat: -1,
-                yoyo: true,
-            },
-            "start"
-        )
-        .to(
-            ".title_05",
-            {
-                opacity: 1,
-                scale: 1,
-                delay: 0.5,
-                ease: "power3.out",
-                repeat: -1,
-                yoyo: true,
-            },
-            "start"
+                y: 0,
+                duration: 0.2,
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 80%",
+                    end: "top 60%",
+                    toggleActions: "play none none reverse",
+                    markers: false,
+                },
+                delay: index * 0.2,
+            }
         );
+    });
+
+
 
     let tl6 = gsap
         .timeline({

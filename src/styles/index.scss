@@ -197,27 +197,39 @@
         overflow: hidden;
         position: relative;
         width: 100%;        
-        .career {            
+        .career {
             .career-text {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: opacity 0.5s, transform 0.5s;
                 display: flex;
                 align-items: center;                
                 justify-content: space-between;            
-                width: 100%;
                 max-width: 1200px;
+                width: 100%;
                 margin: 0 auto;
                 .company {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    font-size: vw(38);
-                    line-height: vw(80);
                     padding-right: vw(30);
-                    .card-item-open {
-                        width: vw(400);
+                    h3 {
+                        font-size: vw(18);
+                        line-height: vw(22);                                            
                     }
-                }            
-            }            
+                    .card-item-open {
+                        width: vw(200);
+                    }
+                }   
+                .desc {
+                    font-size: vw(18);
+                    width: 100%;
+                    span {
+                        display: block;
+                    }
+                }         
+            }
         }
     }
 

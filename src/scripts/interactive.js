@@ -23,33 +23,74 @@ const interactive = () => {
         },
     });
 
-
     const careerTexts = document.querySelectorAll(".career-text");
 
-    careerTexts.forEach((element, index) => {
-        gsap.fromTo(
-            element,
-            {
-                opacity: 0,
-                y: 50,
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.2,
-                scrollTrigger: {
-                    trigger: element,
-                    start: "top 80%",
-                    end: "top 60%",
-                    toggleActions: "play none none reverse",
-                    markers: false,
-                },
-                delay: index * 0.2,
-            }
-        );
+    careerTexts.forEach((element) => {
+        element.style.opacity = 0;
     });
 
-
+    let tl2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".career",
+            start: "center center",
+            end: "bottom center",
+            scrub: true,
+            markers: true,
+            toggleActions: "play reverse play reverse",
+        },
+    });
+    tl2.to(".title_00", {
+        opacity: 1,
+        duration: 0.1,
+    })
+        .to(".title_00", {
+            opacity: 1,
+            duration: 0.1,
+        })
+        .to(".title_00", {
+            opacity: 0,
+            duration: 0.1,
+        })
+        .to(".title_01", {
+            opacity: 1,
+            duration: 0.1,
+        })
+        .to(".title_01", {
+            opacity: 0,
+            duration: 0.1,
+        })
+        .to(".title_02", {
+            opacity: 1,
+            duration: 0.1,
+        })
+        .to(".title_02", {
+            opacity: 0,
+            duration: 0.1,
+        })
+        .to(".title_03", {
+            opacity: 1,
+            duration: 0.1,
+        })
+        .to(".title_03", {
+            opacity: 0,
+            duration: 0.1,
+        })
+        .to(".title_04", {
+            opacity: 1,
+            duration: 0.1,
+        })
+        .to(".title_04", {
+            opacity: 0,
+            duration: 0.1,
+        })
+        .to(".title_05", {
+            opacity: 1,
+            duration: 0.1,
+        })
+        .to(".title_05", {
+            opacity: 0,
+            duration: 0.1,
+        });
 
     let tl6 = gsap
         .timeline({

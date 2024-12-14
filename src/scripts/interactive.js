@@ -32,68 +32,102 @@ const interactive = () => {
     let tl2 = gsap.timeline({
         scrollTrigger: {
             trigger: ".career",
-            start: "center center",
-            end: "bottom center",
+            start: "center bottom",
+            end: "top bottom",
+            toggleActions: "play reverse play reverse",
             pin: true,
             pinSpacing: false,
-            scrub: 2,
+            scrub: 6,
             markers: true,
-            toggleActions: "play reverse play reverse",
+            ease: 'power.inOut',
         },
     });
-    tl2.to(".title_00", {
-        opacity: 1,
-        duration: 0.1,
-    })
+    tl2
         .to(".title_00", {
-            opacity: 1,
-            duration: 0.1,
-        })
+                opacity: 0,
+                delay: 2,
+                duration: 3,
+                y: -100,
+            }
+        )    
         .to(".title_00", {
-            opacity: 0,
-            duration: 0.1,
-        })
+                opacity: 1,
+                delay: 2,
+                duration: 6,
+                y: 100,
+            },
+        )
         .to(".title_01", {
-            opacity: 1,
-            duration: 0.1,
-        })
+                opacity: 0,
+                delay: 2,
+                duration: 3,
+                y: -100,
+            }
+        )
         .to(".title_01", {
-            opacity: 0,
-            duration: 0.1,
-        })
+                opacity: 1,
+                delay: 2,
+                duration: 6,
+                y: 100,
+            },
+        )
         .to(".title_02", {
-            opacity: 1,
-            duration: 0.1,
-        })
+                opacity: 0,
+                delay: 2,
+                duration: 3,
+                y: -100,
+            }
+        )
         .to(".title_02", {
-            opacity: 0,
-            duration: 0.1,
-        })
+                opacity: 1,
+                delay: 2,
+                duration: 6,
+                y: 100,
+            },
+        )
         .to(".title_03", {
-            opacity: 1,
-            duration: 0.1,
-        })
+                opacity: 0,
+                delay: 2,
+                duration: 3,
+                y: -100,
+            }
+        )
         .to(".title_03", {
-            opacity: 0,
-            duration: 0.1,
-        })
+                opacity: 1,
+                delay: 2,
+                duration: 6,
+                y: 100,
+            },
+        )
         .to(".title_04", {
-            opacity: 1,
-            duration: 0.1,
-        })
+                opacity: 0,
+                delay: 2,
+                duration: 3,
+                y: -100,
+            }
+        )
         .to(".title_04", {
-            opacity: 0,
-            duration: 0.1,
-        })
+                opacity: 1,
+                delay: 2,
+                duration: 6,
+                y: 100,
+            },
+        )
         .to(".title_05", {
-            opacity: 1,
-            duration: 0.1,
-        })
+                opacity: 0,
+                delay: 2,
+                duration: 3,
+                y: -100,
+            }
+        )
         .to(".title_05", {
-            opacity: 0,
-            duration: 0.1,
-        });
-
+                opacity: 1,
+                delay: 2,
+                duration: 6,
+                y: 100,
+            },
+        );
+        
     let tl6 = gsap
         .timeline({
             scrollTrigger: {

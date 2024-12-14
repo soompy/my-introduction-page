@@ -193,40 +193,49 @@
         }
     }
 
-    &.a_02 {
-        overflow: hidden;
+    &.a_02 {        
         position: relative;
-        width: 100%;        
+        width: 100%; 
+        margin: 120px 0;       
         .career {
-            .career-text {
-                opacity: 0;
-                transform: translateY(50px);
-                transition: opacity 0.5s, transform 0.5s;
+            .career-text {                              
                 display: flex;
                 align-items: center;                
                 justify-content: space-between;            
                 max-width: 1200px;
                 width: 100%;
-                margin: 0 auto;
+                margin: 0 auto 80px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
                 .company {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    padding-right: vw(30);
+                    flex: 1;
+                    padding-right: 30px;
                     h3 {
-                        font-size: vw(18);
-                        line-height: vw(22);                                            
+                        display: none;
+                        font-size: 18px;
+                        line-height: 22px;                                            
                     }
                     .card-item-open {
-                        width: vw(200);
+                        width: 200px;
                     }
                 }   
                 .desc {
-                    font-size: vw(18);
-                    width: 100%;
-                    span {
-                        display: block;
+                    font-size: 18px;
+                    flex: 2;
+
+                    .works-text {
+                        display: flex;
+                        line-height: 32px;
+                        strong {
+                            flex-shrink: 0;
+                            font-weight: bold;
+                            padding-right: 30px;
+                        }
                     }
                 }         
             }
@@ -234,7 +243,7 @@
     }
 
     &.a_03 {
-        height: 50vh;
+        height: 50vh; 
         align-items: center;
         justify-content: center;    
         padding: 80px 40px;
@@ -584,12 +593,6 @@
 
         &.a_02 {
             padding: 0 40px;
-            .left-area {
-                width: 65%;
-            }
-            .right-area {
-                width: 30%;
-            }
         }
 
         &.a_05 {
@@ -673,7 +676,33 @@
         }
 
         &.a_02 {
-            padding: 0 vw(40);                               
+            padding: 0 vw(40);      
+            .career {
+                .career-text {
+                    flex-direction: column;
+                    margin-bottom: vw(80);
+                    .company {
+                        padding-bottom: vw(30);
+                        padding-right: 0;
+                        h3 {
+                            font-size: vw(18);
+                            line-height: vw(22);                                            
+                        }
+                        .card-item-open {
+                            width: vw(200);
+                        }
+                    }   
+                    .desc {
+                        font-size: vw(18);
+                        .works-text {
+                            line-height: vw(32);
+                            strong {
+                                padding-right: vw(30);
+                            }
+                        }
+                    }         
+                }
+            }                         
         }
 
         &.a_03 {

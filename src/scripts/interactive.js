@@ -23,110 +23,26 @@ const interactive = () => {
         },
     });
 
-    const careerTexts = document.querySelectorAll(".career-text");
+    const titles = document.querySelectorAll(".career-text");
 
-    careerTexts.forEach((element) => {
-        element.style.opacity = 0;
-    });
-
-    let tl2 = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".career",
-            start: "center bottom",
-            end: "top bottom",
-            toggleActions: "play reverse play reverse",
-            pin: true,
-            pinSpacing: false,
-            scrub: 6,
-            markers: true,
-            ease: 'power.inOut',
-        },
-    });
-    tl2
-        .to(".title_00", {
-                opacity: 0,
-                delay: 2,
-                duration: 3,
-                y: -100,
-            }
-        )    
-        .to(".title_00", {
+    titles.forEach((element, index) => {
+        gsap.fromTo(
+            element,
+            { opacity: 0, y: 50 },
+            {
                 opacity: 1,
-                delay: 2,
-                duration: 6,
-                y: 100,
-            },
-        )
-        .to(".title_01", {
-                opacity: 0,
-                delay: 2,
-                duration: 3,
-                y: -100,
+                y: 0,
+                duration: 1.5,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 80%",
+                    end: "top 60%",
+                    toggleActions: "play none none reverse",
+                },
             }
-        )
-        .to(".title_01", {
-                opacity: 1,
-                delay: 2,
-                duration: 6,
-                y: 100,
-            },
-        )
-        .to(".title_02", {
-                opacity: 0,
-                delay: 2,
-                duration: 3,
-                y: -100,
-            }
-        )
-        .to(".title_02", {
-                opacity: 1,
-                delay: 2,
-                duration: 6,
-                y: 100,
-            },
-        )
-        .to(".title_03", {
-                opacity: 0,
-                delay: 2,
-                duration: 3,
-                y: -100,
-            }
-        )
-        .to(".title_03", {
-                opacity: 1,
-                delay: 2,
-                duration: 6,
-                y: 100,
-            },
-        )
-        .to(".title_04", {
-                opacity: 0,
-                delay: 2,
-                duration: 3,
-                y: -100,
-            }
-        )
-        .to(".title_04", {
-                opacity: 1,
-                delay: 2,
-                duration: 6,
-                y: 100,
-            },
-        )
-        .to(".title_05", {
-                opacity: 0,
-                delay: 2,
-                duration: 3,
-                y: -100,
-            }
-        )
-        .to(".title_05", {
-                opacity: 1,
-                delay: 2,
-                duration: 6,
-                y: 100,
-            },
         );
+    });
         
     let tl6 = gsap
         .timeline({
